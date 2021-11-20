@@ -1,0 +1,180 @@
+$fuentePrincipal:'Galindo',
+cursive;
+$fuenteSecundaria: 'Lobster',
+cursive;
+$fuenteTerciaria:'Arima Madurai',
+cursive;
+
+@mixin contenedorPagSecundaria {
+    background-color: rgba(255, 255, 255, 0.9);
+
+    border-radius: 10px;
+}
+
+/******Globales*******/
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $fuentePrincipal;
+    margin: 0 auto;
+    background-image: url(../img/fondo.jpg);
+    background-position: bottom center;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 23px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-align: center;
+}
+
+h5 {
+    font-size: 20px;
+    border-bottom: 2px solid black;
+    display: inline-block;
+    font-family: $fuenteSecundaria
+}
+
+/*****************************************************/
+
+.contenedorTitulo {
+    margin-top: 20px;
+}
+
+
+
+
+
+#muestraPedido {
+
+    background-color: rgba(255, 255, 255, 0.9);
+    position: sticky;
+    top: 0;
+
+    border-radius: none;
+    width: 100%;
+
+    .contenedor-padre {
+        margin: 15px;
+        display: flex;
+        justify-content: space-between;
+
+
+        .foto-carrito {
+            width: 40px;
+
+        }
+
+        .opacada {
+            width: 40px;
+            opacity: 0.0;
+        }
+
+    }
+
+}
+
+.seleccion {
+    background-color: rgb(255, 91, 31);
+    color: #fff;
+    border-radius: 10px;
+    font-family: $fuenteTerciaria;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    width: 92%;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+.contenedorComidas {
+
+    @include contenedorPagSecundaria();
+
+    max-width: 92%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 7px;
+
+    .platoEingredientes {
+
+        .nombrePlato {
+            font-family: $fuenteTerciaria;
+            font-size: 20px;
+            font-weight: bold;
+
+            .iconos-comida {
+                width: 30px;
+            }
+        }
+
+        .contenidoIngredientes {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 15px;
+
+        }
+
+        li.contenidoIngredientes {
+            margin-top: 5px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 16px;
+        }
+    }
+
+    .precios {
+        font-family: $fuenteTerciaria;
+        font-size: 20px;
+        font-weight: bold;
+
+    }
+}
+
+.contenedorComidas:active {
+    transform: scale(0.95);
+    transition: ease-in-out 0.05s;
+}
+
+.botones {
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    padding: 4px;
+    font-family: $fuenteSecundaria;
+    border: none;
+    background-color: coral;
+    border-radius: 4px;
+}

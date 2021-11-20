@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="sass/estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="contenedorTitulo">
+            <h2>Cafetería</h2>
+        </div>
+    </header>
+
+
+    <main>
+
+        <section id="muestraPedido" class="muestraPedido">
+
+            <div class="contenedor-padre">
+                <img class="opacada" src="img/flecha-slide.png" alt="flecha-slide">
+                <img class="foto-carrito" src="img/carrito-de-compras.png" alt="carrito de compras">
+                <img class="foto-carrito" src="img/flecha-slide.png" alt="flecha-slide">
+
+            </div>
+
+            <div id="muestra" class="muestra">
+
+            </div>
+            
+                <div class="botones">
+                    <button id="cancelar_pedido">Cancelar <br> pedido</button>
+                    <button id="borrar_pedido">Borrar ultimo <br> pedido</button>
+                    <button id="llamar_mozo">Llamar <br> al mozo</button>
+                    <button id="realizar_pedido">Realizar <br> pedido</button>
+
+                </div>
+           
+
+        </section>
+
+
+<p class="seleccion">Seleccioná los pedidos que desees consumir</p>
+
+
+
+
+        <div id="1" onClick="tomarPedido(this.id)" class="contenedorComidas">
+            <div class="platoEingredientes">
+                <p class="nombrePlato">Café pequeño</p>
+                <p class="contenidoIngredientes">Café o café con leche.</p>
+            </div>
+
+            <p class="precios">$90</p>
+        </div>
+
+        <div id="2" onClick="tomarPedido(this.id)" class="contenedorComidas">
+            <div class="platoEingredientes">
+                <p class="nombrePlato">Café mediano</p>
+                <p class="contenidoIngredientes">Café o café con leche.</p>
+            </div>
+
+            <p class="precios">$140</p>
+        </div>
+
+        <div id="3" onClick="tomarPedido(this.id)" class="contenedorComidas">
+            <div class="platoEingredientes">
+                <p class="nombrePlato">Café grande</p>
+                <p class="contenidoIngredientes">Café o café con leche.</p>
+            </div>
+
+            <p class="precios">$160</p>
+        </div>
+
+        <div id="4" onClick="tomarPedido(this.id)" class="contenedorComidas">
+            <div class="platoEingredientes">
+                <p class="nombrePlato">Café Irlandes</p>
+                <p class="contenidoIngredientes">Café con whisky.</p>
+            </div>
+
+            <p class="precios">$300</p>
+        </div>
+
+        <div id="5" onClick="tomarPedido(this.id)" class="contenedorComidas">
+            <div class="platoEingredientes">
+                <p class="nombrePlato">Submarino</p>
+                <p class="contenidoIngredientes"> Barra de chocolate dentro de una taza de leche caliente. <br> </p>
+            </div>
+
+            <p class="precios">$340</p>
+        </div>
+
+        <div id="6" onClick="tomarPedido(this.id)"  class="contenedorComidas">
+            <div class="platoEingredientes">
+                <p class="nombrePlato">Capuchino</p>
+                <p class="contenidoIngredientes"> <br> </p>
+            </div>
+
+            <p class="precios">$240</p>
+        </div>
+
+        <div id="7" onClick="tomarPedido(this.id)"  class="contenedorComidas">
+            <div class="platoEingredientes">
+                <p class="nombrePlato">Tortitas</p>
+                <p class="contenidoIngredientes"> <br> </p>
+            </div>
+
+            <p class="precios">$40</p>
+        </div>
+
+        <div id="8" onClick="tomarPedido(this.id)"  class="contenedorComidas">
+            <div class="platoEingredientes">
+                <p class="nombrePlato">Facturas o Medialunas</p>
+                <p class="contenidoIngredientes"> <br> </p>
+            </div>
+
+            <p class="precios">$60</p>
+        </div>
+
+        <div id="9" onClick="tomarPedido(this.id)"  class="contenedorComidas">
+            <div class="platoEingredientes">
+                <p class="nombrePlato">Tostados</p>
+                <p class="contenidoIngredientes"> <br> </p>
+            </div>
+
+            <p class="precios">$290</p>
+        </div>
+
+        <div id="10" onClick="tomarPedido(this.id)"  class="contenedorComidas">
+            <div class="platoEingredientes">
+                <p class="nombrePlato">Churros Churrico</p>
+                <p class="contenidoIngredientes"> <br> </p>
+            </div>
+
+            <p class="precios">$80</p>
+        </div>
+
+    </main>
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
