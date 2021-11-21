@@ -7,6 +7,7 @@ class Alimentos {
     verInformacion() {
         alert(`Este es un ${this.nombre}, su precio es de $${this.precio} y su descripcion es: ${this.descripcion}`);
     }
+
 }
 
 function tomarPedido(id) {
@@ -85,14 +86,34 @@ function tomarPedido(id) {
 }
 const alimentos = [];
 
+
 function precioFinal() {
-    let productosElegidos = "Pedido: " + "<br>" + "<br>";
+
+    let productosElegidos = "";
     var precioTotal = 0;
+
     for (let i = 0; i < alimentos.length; i++) {
-        productosElegidos += "\n - " + alimentos[i].nombre + " $" + alimentos[i].precio + '<br>';
+
+        productosElegidos += "\n - " + alimentos[i].nombre + "  $" + alimentos[i].precio +'<br>';
         precioTotal += alimentos[i].precio;
     }
-    document.querySelector('#muestra').innerHTML = productosElegidos + "<br>" + "\n El total a pagar es:" + "<br>" + "$" + precioTotal;
+
+    let htmlLista = `
+    <h3>Pedido: </h3>
+    <div id="listaDeJS">
+    ${productosElegidos} 
+    </div>`;
+
+    let htmlResumen = `
+    <h3>Resumen: </h3>
+    <div id="precioDeJS">
+    <p> Efectivo o débito: <span> $${precioTotal} </span> </p>  <br>
+    <p> Tarjeta de crédito(+20%):<span> $${precioTotal * 1.20 }</span> </p>
+    </div>`;
+
+    $(".listaCompras").empty().append(htmlLista);
+    $(".resumen").empty().append(htmlResumen);
+   
 }
 
 function llamarMozo() {
@@ -100,14 +121,22 @@ function llamarMozo() {
 }
 
 function cancelarPedido() {
-    alimentos.splice(0, alimentos.length + 1);
-    alert("PEDIDO CANCELADO")
-    document.querySelector('#muestra').innerHTML = "";
+    if (alimentos.length == 0) {
+        alert("ATENCIÓN: Todavía no ha realizado ningún pedido.");
+    } else {
+        alert("PEDIDO CANCELADO");
+        alimentos.splice(0, alimentos.length + 1);
+        $('#muestra .listaCompras #listaDeJS').empty();
+        $('#muestra .resumen #precioDeJS').empty();
+    }
+
 }
 
 function realizarPedido() {
     if (alimentos.length == 0) {
         alert("ATENCIÓN: Todavía no ha realizado ningún pedido.");
+        $('#muestra .listaCompras #listaDeJS').empty();
+        $('#muestra .resumen #precioDeJS').empty();
     } else {
         alert("Su pedido ha sido recibido.")
     }
@@ -116,7 +145,8 @@ function realizarPedido() {
 function borrarPedido() {
     if (alimentos.length == 0) {
         alert("ATENCIÓN: Todavía no ha realizado ningún pedido.");
-        document.querySelector('#muestra').innerHTML = "";
+        $('#muestra .listaCompras #listaDeJS').empty();
+        $('#muestra .resumen #precioDeJS').empty();
     } else {
         alimentos.pop();
         precioFinal();

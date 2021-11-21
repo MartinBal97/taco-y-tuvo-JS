@@ -75,28 +75,59 @@ h5 {
     background-color: rgba(255, 255, 255, 0.9);
     position: sticky;
     top: 0;
-
     border-radius: none;
     width: 100%;
-
     .contenedor-padre {
         margin: 15px;
         display: flex;
         justify-content: space-between;
-
-
         .foto-carrito {
             width: 40px;
 
         }
-
         .opacada {
             width: 40px;
             opacity: 0.0;
         }
-
     }
+    .muestra {
+        display: flex;
+        justify-content: center;
+        flex-flow: column-wrap;
+        font-family: $fuenteTerciaria;
+        gap: 10px;
 
+        .listaCompras{
+            background-color: rgb(240, 240, 240);
+            width: 90%;
+            text-align: center;
+            border-radius: 20px;
+            padding: 7px;
+            margin-left: 10px;
+
+            #listaDeJS {
+                text-align: left;
+                margin-left: 5px;
+            }
+        }
+        .resumen{
+            background-color: rgb(240, 240, 240);
+            width: 90%;
+            text-align: center;
+            border-radius: 20px;
+            padding: 7px;
+            margin-right: 10px;
+            
+
+           p {
+               display: inline-block;
+               
+               span {
+                font-size: 22px;
+               }
+           }
+        }
+    }
 }
 
 .seleccion {
@@ -175,6 +206,7 @@ button {
     padding: 4px;
     font-family: $fuenteSecundaria;
     border: none;
-    background-color: coral;
+    background-color:  rgb(255, 91, 31);
     border-radius: 4px;
+    
 }
