@@ -61,6 +61,7 @@ h5 {
 }
 
 #muestraPedido .contenedor-padre {
+  padding: 5px 0;
   margin: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,6 +78,17 @@ h5 {
 #muestraPedido .contenedor-padre .opacada {
   width: 40px;
   opacity: 0.0;
+}
+
+#muestraPedido .contenedor-padre #cantProductos {
+  padding: 0px 9px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  position: relative;
+  right: 15px;
+  font-family: "Arima Madurai", cursive;
+  font-weight: bold;
 }
 
 #muestraPedido .muestra {
@@ -119,10 +131,11 @@ h5 {
 
 #muestraPedido .muestra .resumen p {
   display: inline-block;
+  font-size: 15px;
 }
 
 #muestraPedido .muestra .resumen p span {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .seleccion {
