@@ -1,0 +1,22 @@
+[{
+        "nombre": "PROMO Café 1",
+        "descripcion": "Café grande más 2 medialunas o tortitas.",
+        "precio": 250
+        
+    },
+    {
+        "nombre": "PROMO Café 2",
+        "descripcion": "Café mediano más 2 medialunas o tortitas.",
+        "precio": 200
+    },
+    {
+        "nombre": "PROMO TOSTADO",
+        "descripcion": "Café mediano más totado de miga",
+        "precio": 400
+    },
+    {
+        "nombre": "PROMO CHURROS",
+        "descripcion": "Café o chocolate grande más 2 churros.",
+        "precio": 300
+    }
+]

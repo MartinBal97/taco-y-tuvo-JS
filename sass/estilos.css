@@ -47,8 +47,23 @@ h5 {
 }
 
 /*****************************************************/
+.contMesa {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.contMesa p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.contMesa .mesas {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
 .contenedorTitulo {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 #muestraPedido {
@@ -219,5 +234,56 @@ button {
   border: none;
   background-color: #ff5b1f;
   border-radius: 4px;
+}
+
+#promociones {
+  text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.53);
+  -webkit-box-shadow: 5px 2px 4px rgba(0, 0, 0, 0.53);
+          box-shadow: 5px 2px 4px rgba(0, 0, 0, 0.53);
+  margin-bottom: 10px;
+}
+
+.contenedorPromo {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  width: 98%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: 6px double #a6af01;
+  border-radius: 15px;
+}
+
+.contenedorPromo .nombrePromo {
+  margin: 9px;
+  font-family: "Galindo", cursive;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.contenedorPromo .contenidoPromo {
+  text-align: center;
+  font-family: "Arima Madurai", cursive;
+  font-weight: bold;
+  font-size: 18px;
+  max-width: 95%;
+}
+
+.contenedorPromo .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contenedorPromo .precioPromo {
+  margin: 8px;
+  padding: 5px 10px;
+  border: 4px inset orangered;
+  border-radius: 100px;
+  font-family: "Lobster", cursive;
+  font-weight: bold;
+  font-size: 20px;
 }
 /*# sourceMappingURL=estilos.css.map */
