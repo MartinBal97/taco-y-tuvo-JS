@@ -226,10 +226,16 @@ h5 {
 .botones {
   padding: 10px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 button {
-  padding: 4px;
+  padding: 4px 10px;
   font-family: "Lobster", cursive;
   border: none;
   background-color: #ff5b1f;
@@ -237,10 +243,16 @@ button {
 }
 
 #promociones {
-  text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.53);
   -webkit-box-shadow: 5px 2px 4px rgba(0, 0, 0, 0.53);
           box-shadow: 5px 2px 4px rgba(0, 0, 0, 0.53);
   margin-bottom: 10px;
+}
+
+#promociones:active, .contenedorPromo:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: ease-in-out 0.05s;
+  transition: ease-in-out 0.05s;
 }
 
 .contenedorPromo {

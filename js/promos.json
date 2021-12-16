@@ -1,8 +1,9 @@
-[{
+[
+    {
         "nombre": "PROMO Café 1",
         "descripcion": "Café grande más 2 medialunas o tortitas.",
         "precio": 250
-        
+
     },
     {
         "nombre": "PROMO Café 2",

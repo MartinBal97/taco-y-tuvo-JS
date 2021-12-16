@@ -226,25 +226,27 @@ h5 {
 .botones {
     padding: 10px;
     text-align: center;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 button {
-    padding: 4px;
+    padding: 4px 10px;
     font-family: $fuenteSecundaria;
     border: none;
     background-color:  rgb(255, 91, 31);
     border-radius: 4px;
 }
 
-
-
-
-
 #promociones {
-    text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.53);
     box-shadow: 5px 2px 4px rgba(0, 0, 0, 0.53);
     margin-bottom: 10px;
 }
+#promociones:active, .contenedorPromo:active {
+    transform: scale(0.95);
+    transition: ease-in-out 0.05s;
+}
+
 .contenedorPromo {
 
     @include contenedorPagSecundaria();
