@@ -30,7 +30,7 @@ html {
 body {
     font-family: $fuentePrincipal;
     margin: 0 auto;
-    background-image: url(../img/fondo.jpg);
+    background-image: url(../img/fondo.jfif);
     background-position: bottom center;
 }
 
@@ -80,19 +80,19 @@ h5 {
 
 .contenedorTitulo {
     margin-top: 10px;
+    padding-top: 15px;
 }
 
 #muestraPedido {
-
+    margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.9);
     position: sticky;
     top: 0;
-    border-radius: none;
-    width: 100%;
+    border-radius: 15px;
+    width: 92%;
 
     .contenedor-padre {
         padding: 5px 0;
-        margin: 15px;
         display: flex;
         justify-content: space-between;
 
@@ -157,7 +157,7 @@ h5 {
 }
 
 .seleccion {
-    background-color: rgb(255, 91, 31);
+    background-color: rgb(102, 27, 0);
     color: #fff;
     border-radius: 10px;
     font-family: $fuenteTerciaria;
@@ -234,7 +234,7 @@ button {
     padding: 4px 10px;
     font-family: $fuenteSecundaria;
     border: none;
-    background-color:  rgb(255, 91, 31);
+    background-color:  rgb(160, 61, 25);
     border-radius: 4px;
 }
 
@@ -250,11 +250,11 @@ button {
 .contenedorPromo {
 
     @include contenedorPagSecundaria();
-    width: 98%;
+    width: 92%;
     margin: 0 auto;
     margin-bottom: 20px;
-    border: 6px double rgb(166, 175, 1);
     border-radius: 15px;
+    padding-top: 10px;
 
     .nombrePromo {
         margin: 9px;

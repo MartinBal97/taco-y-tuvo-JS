@@ -1,6 +1,5 @@
 /******Globales*******/
 html {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -9,14 +8,13 @@ html {
 *:after {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
 body {
   font-family: "Galindo", cursive;
   margin: 0 auto;
-  background-image: url(../img/fondo.jpg);
+  background-image: url(../img/fondo.jfif);
   background-position: bottom center;
 }
 
@@ -51,50 +49,41 @@ h5 {
   margin-top: 10px;
   text-align: center;
 }
-
 .contMesa p {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
 }
-
 .contMesa .mesas {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
 }
 
 .contenedorTitulo {
   margin-top: 10px;
+  padding-top: 15px;
 }
 
 #muestraPedido {
+  margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.9);
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  border-radius: none;
-  width: 100%;
+  border-radius: 15px;
+  width: 92%;
 }
-
 #muestraPedido .contenedor-padre {
   padding: 5px 0;
-  margin: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 #muestraPedido .contenedor-padre .foto-carrito {
   width: 40px;
 }
-
 #muestraPedido .contenedor-padre .opacada {
   width: 40px;
-  opacity: 0.0;
+  opacity: 0;
 }
-
 #muestraPedido .contenedor-padre #cantProductos {
   padding: 0px 9px;
   background-color: red;
@@ -105,56 +94,43 @@ h5 {
   font-family: "Arima Madurai", cursive;
   font-weight: bold;
 }
-
 #muestraPedido .muestra {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column-wrap;
-          flex-flow: column-wrap;
+  justify-content: center;
+  flex-flow: column-wrap;
   font-family: "Arima Madurai", cursive;
   gap: 10px;
 }
-
 #muestraPedido .muestra .listaCompras {
-  background-color: #f0f0f0;
+  background-color: rgb(240, 240, 240);
   width: 90%;
   text-align: center;
   border-radius: 20px;
   padding: 7px;
   margin-left: 10px;
 }
-
 #muestraPedido .muestra .listaCompras #listaDeJS {
   text-align: left;
   margin-left: 5px;
 }
-
 #muestraPedido .muestra .resumen {
-  background-color: #f0f0f0;
+  background-color: rgb(240, 240, 240);
   width: 90%;
   text-align: center;
   border-radius: 20px;
   padding: 7px;
   margin-right: 10px;
 }
-
 #muestraPedido .muestra .resumen p {
   display: inline-block;
   font-size: 15px;
 }
-
 #muestraPedido .muestra .resumen p span {
   font-size: 20px;
 }
 
 .seleccion {
-  background-color: #ff5b1f;
+  background-color: rgb(102, 27, 0);
   color: #fff;
   border-radius: 10px;
   font-family: "Arima Madurai", cursive;
@@ -174,42 +150,30 @@ h5 {
   padding: 10px;
   margin-bottom: 5px;
   border-radius: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 0 auto;
   margin-top: 7px;
 }
-
 .contenedorComidas .platoEingredientes .nombrePlato {
   font-family: "Arima Madurai", cursive;
   font-size: 20px;
   font-weight: bold;
 }
-
 .contenedorComidas .platoEingredientes .nombrePlato .iconos-comida {
   width: 30px;
 }
-
 .contenedorComidas .platoEingredientes .contenidoIngredientes {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   font-size: 15px;
 }
-
 .contenedorComidas .platoEingredientes li.contenidoIngredientes {
   margin-top: 5px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 16px;
 }
-
 .contenedorComidas .precios {
   font-family: "Arima Madurai", cursive;
   font-size: 20px;
@@ -217,61 +181,50 @@ h5 {
 }
 
 .contenedorComidas:active {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
-  -webkit-transition: ease-in-out 0.05s;
+  transform: scale(0.95);
   transition: ease-in-out 0.05s;
 }
 
 .botones {
   padding: 10px;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 
 button {
   padding: 4px 10px;
   font-family: "Lobster", cursive;
   border: none;
-  background-color: #ff5b1f;
+  background-color: rgb(160, 61, 25);
   border-radius: 4px;
 }
 
 #promociones {
-  -webkit-box-shadow: 5px 2px 4px rgba(0, 0, 0, 0.53);
-          box-shadow: 5px 2px 4px rgba(0, 0, 0, 0.53);
+  box-shadow: 5px 2px 4px rgba(0, 0, 0, 0.53);
   margin-bottom: 10px;
 }
 
 #promociones:active, .contenedorPromo:active {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
-  -webkit-transition: ease-in-out 0.05s;
+  transform: scale(0.95);
   transition: ease-in-out 0.05s;
 }
 
 .contenedorPromo {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
-  width: 98%;
+  width: 92%;
   margin: 0 auto;
   margin-bottom: 20px;
-  border: 6px double #a6af01;
   border-radius: 15px;
+  padding-top: 10px;
 }
-
 .contenedorPromo .nombrePromo {
   margin: 9px;
   font-family: "Galindo", cursive;
   font-weight: bold;
   font-size: 22px;
 }
-
 .contenedorPromo .contenidoPromo {
   text-align: center;
   font-family: "Arima Madurai", cursive;
@@ -279,16 +232,10 @@ button {
   font-size: 18px;
   max-width: 95%;
 }
-
 .contenedorPromo .flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .contenedorPromo .precioPromo {
   margin: 8px;
   padding: 5px 10px;
@@ -297,5 +244,4 @@ button {
   font-family: "Lobster", cursive;
   font-weight: bold;
   font-size: 20px;
-}
-/*# sourceMappingURL=estilos.css.map */
+}/*# sourceMappingURL=estilos.css.map */

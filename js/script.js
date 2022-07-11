@@ -1,8 +1,8 @@
 class Alimentos {
     constructor(nombre, precio, descripcion) {
-        this.nombre = nombre;
-        this.precio = precio;
-        this.descripcion = descripcion;
+        this.nombre = nombre
+        this.precio = precio
+        this.descripcion = descripcion
     }
 }
 
@@ -57,60 +57,29 @@ const produtosCafeteria = [{
         descripcion: ""
     }
 ];
+var carrito = [];
 
 // FUNCION PARA MOVER FLECHA CADA VEZ QUE SE HACE CLICK
-var grados = 0;
+var grados = 0
 $(".contenedor-padre").click(() => {
     grados += 180;
     $("#flechaAbajo").css({
-        "transform": "rotateX(" + grados + "deg)",
-        "transition": "0.5s"
+        "transform": "rotateX("+grados+ "deg)",
+        "transition": "0.4s"
     });
-    $("#slide").toggle("slow");
-});
-
-// AGREGANDO TODOS LOS PEDIDOS AL HTML con los datos de JSON
-var cont = -1;
-var cont2 = 0;
-$("#promociones").click(function () {
-    $.get("js/promos.json", function (promos, estado) {
-        if (estado === "success") {
-
-            for (let i = 0; i < promos.length; i++) {
-                produtosCafeteria.push({ nombre: promos[i].nombre, descripcion: promos[i].descripcion, precio: promos[i].precio });
-            }
-
-            if (cont2 == 0) {
-                for (const promo of promos) {
-                    cont += 1;
-                    $("#contenedorDePromos").append(`<div id="${cont}" onClick="tomarPedido(this.id)" class="contenedorPromo">
-                                            <h3 class="nombrePromo">${promo.nombre}</h3>
-                                            <p class="contenidoPromo">${promo.descripcion}</p>
-                                            <div class="flex">
-                                                <p> </p>
-                                                <p class="precioPromo">$${promo.precio}</p>
-                                            </div>
-                                      </div>`);
-                }
-            }
-        } else {
-            Swal.fire('Hoy no hay promociones disponibles')
-        }
-        cont2 += 1;
-    });
-});
-
+    $("#slide").toggle("slow")
+})
 // AGREGANDO TODOS LOS PEDIDOS AL HTML
-var cont = -1;
+var cont = -1
 for (let i = 0; i < produtosCafeteria.length; i++) {
-    cont += 1;
+    cont += 1
     $("#contenedorDeComidas").append(` <div id="${cont}" onClick="tomarPedido(this.id)" class="contenedorComidas">
-                                                <div class="platoEingredientes">
-                                                    <p class="nombrePlato">${produtosCafeteria[i].nombre}</p>
-                                                    <p class="contenidoIngredientes">${produtosCafeteria[i].descripcion}</p>
-                                                </div>
-                                                <p class="precios">$${produtosCafeteria[i].precio}</p>
-                                            </div>`);
+                                            <div class="platoEingredientes">
+                                                <p class="nombrePlato">${produtosCafeteria[i].nombre}</p>
+                                                <p class="contenidoIngredientes">${produtosCafeteria[i].descripcion}</p>
+                                            </div>
+                                            <p class="precios">$${produtosCafeteria[i].precio}</p>
+                                        </div>`)
 }
 // SE AGREGA AL CARRITO EL PRODUCTO SELECCIONADO DE ACUERDO A SU ID Y SE LLAMA A LA FUNCION precioFinal()
 function tomarPedido(id) {
@@ -119,14 +88,8 @@ function tomarPedido(id) {
 }
 // FUNCION PARA VISUALIZAR LA CANTIDAD DE PEDIDOS EN EL CARRITO
 function numeroDePedidos() {
-    if (carrito.length > 9) {
-        $("#cantProductos").empty().append("+9");
-    } else {
-        $("#cantProductos").empty().append(carrito.length);
-    }
+    carrito.length > 9 ? $("#cantProductos").empty().append("+9") : $("#cantProductos").empty().append(carrito.length)
 }
-
-var carrito = [];
 // FUNCION AGREGAR EL RESUMEN T EL PRECIO DE LOS PEDIDOS QUE SE VAN REALIZANDO
 function precioFinal() {
     let productosElegidos = "";
@@ -134,24 +97,23 @@ function precioFinal() {
 
     for (let i = 0; i < carrito.length; i++) {
         productosElegidos += "\n - " + carrito[i].nombre + "  $" + carrito[i].precio + '<br>';
-        precioTotal += carrito[i].precio;
+        precioTotal += carrito[i].precio
     }
 
-    $(".listaCompras").empty().append(` <div id="listaDeJS">
-                                                <h3>Pedido: </h3>
-                                                <p>${productosElegidos}</p>  
-                                            </div>`);
+    $(".listaCompras").empty().append(`<div id="listaDeJS">
+                                            <h3>Pedido: </h3>
+                                            <p>${productosElegidos}</p>  
+                                        </div>`)
     $(".resumen").empty().append(`<div id="precioDeJS">
                                         <h3>Resumen: </h3>
                                             <p> Efectivo o débito: <br> <span> $${precioTotal} </span> </p>  <br>
                                             <p> Tarjeta de crédito(+20%): <br> <span> $${precioTotal * 1.20}</span> </p>
-                                    </div>`);
-    numeroDePedidos();
+                                    </div>`)
+    numeroDePedidos()
 }
-
 // FUNCION BOTON LLAMAR AL MOZO
 $("#llamar_mozo").click(function () {
-    var numMesa = $("#mesas").val();
+    var numMesa = $("#mesas").val()
 
     if ((numMesa < 26) && (numMesa > 0)) {
         Swal.fire({
@@ -166,10 +128,10 @@ $("#llamar_mozo").click(function () {
             text: 'El mozo no sabe cual es su mesa, coloque el número de mesa correspondiente.'
         })
     }
-});
+})
 // FUNCION BOTON REALIZAR PEDIDO
 $("#realizar_pedido").click(function realizarPedido() {
-    var numMesa = $("#mesas").val();
+    var numMesa = $("#mesas").val()
 
     if ((numMesa < 26) && (numMesa > 0)) {
         if (carrito.length == 0) {
@@ -177,10 +139,10 @@ $("#realizar_pedido").click(function realizarPedido() {
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Todavía no ha realizado ningún pedido.'
-            });
+            })
 
-            $('#muestra .listaCompras #listaDeJS').empty();
-            $('#muestra .resumen #precioDeJS').empty();
+            $('#muestra .listaCompras #listaDeJS').empty()
+            $('#muestra .resumen #precioDeJS').empty()
         } else {
             Swal.fire({
                 title: 'Confirmar pedido',
@@ -200,13 +162,13 @@ $("#realizar_pedido").click(function realizarPedido() {
                         'Su pedido está en preparación.',
                         'success'
                     )
-                    const enJSON = JSON.stringify(carrito);
-                    localStorage.setItem("carrito", enJSON);
+                    const enJSON = JSON.stringify(carrito)
+                    localStorage.setItem("carrito", enJSON)
 
-                    $('#muestra .listaCompras #listaDeJS').empty();
-                    $('#muestra .resumen #precioDeJS').empty();
-                    carrito.splice(0, carrito.length + 1);
-                    numeroDePedidos();
+                    $('#muestra .listaCompras #listaDeJS').empty()
+                    $('#muestra .resumen #precioDeJS').empty()
+                    carrito.splice(0, carrito.length + 1)
+                    numeroDePedidos()
                 }
             })
         }
@@ -249,13 +211,48 @@ $("#cancelar_pedido").on("click", function cancelarPedido() {
     }
 });
 
+// AGREGANDO TODOS LAS PROMOS AL HTML con los datos de JSON
+var cont = -1
+var cont2 = 0
+$("#promociones").click(function () {
+    $.get("js/promos.json", function (promos, estado) {
+        if (estado === "success") {
+
+            for (let i = 0; i < promos.length; i++) {
+                produtosCafeteria.push({
+                    nombre: promos[i].nombre,
+                    descripcion: promos[i].descripcion,
+                    precio: promos[i].precio
+                });
+            }
+
+            if (cont2 == 0) {
+                for (const promo of promos) {
+                    cont += 1
+                    $("#contenedorDePromos").append(
+                        `<div id="${cont}" onClick="tomarPedido(this.id)" class="contenedorPromo">
+                            <h3 class="nombrePromo">${promo.nombre}</h3>
+                            <p class="contenidoPromo">${promo.descripcion}</p>
+                            <div class="flex">
+                                <p> </p>
+                                <p class="precioPromo">$${promo.precio}</p>
+                            </div>
+                        </div>`)
+                }
+            }
+        } else {
+            Swal.fire('Hoy no hay promociones disponibles')
+        }
+        cont2 += 1
+    });
+});
 
 // Si anteriormente el cliente ya ha realizado un pedido el siguiente codigo le ofrecerá realizar el mismo pedido que hizo esa vez
-$( document ).ready(function() {
+$(document).ready(function () {
     if (localStorage.length > 0) {
-        Swal.fire ({
+        Swal.fire({
             title: 'Hola de nuevo!',
-            text: 'Notamos que ya nos has visitado anteriormente lo cual nos enorgullece que hayas decidido volver. ¿Querés agregar al carrito el último pedido que realizaste la ultima vez que nos visitaste?',
+            text: 'Gracias por habernos visitado nuevamente. ¿Querés agregar al carrito el último pedido que realizaste?',
             grow: 'row',
             cancelButtonColor: '#d33',
             showCancelButton: true,
@@ -270,6 +267,6 @@ $( document ).ready(function() {
                 precioFinal();
             }
         })
-        
+
     }
 });
