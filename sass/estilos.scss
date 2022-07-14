@@ -6,7 +6,7 @@ $fuenteTerciaria:'Arima Madurai',
 cursive;
 
 @mixin contenedorPagSecundaria {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.47);
 
     border-radius: 10px;
 }
@@ -69,6 +69,7 @@ h5 {
     p {
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: bold;
+        font-size: 0.8rem ;
     }
 
     .mesas {
@@ -80,12 +81,13 @@ h5 {
 
 .contenedorTitulo {
     margin-top: 10px;
-    padding-top: 15px;
+    padding: 15px;
+    font-family: $fuenteSecundaria;
 }
 
 #muestraPedido {
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.47);
     position: sticky;
     top: 0;
     border-radius: 15px;
