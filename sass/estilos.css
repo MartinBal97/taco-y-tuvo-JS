@@ -14,8 +14,10 @@ html {
 body {
   font-family: "Galindo", cursive;
   margin: 0 auto;
-  background-image: url(../img/fondo.jfif);
-  background-position: bottom center;
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+  /*  background-image: url(../img/fondo.jfif);
+    background-position: bottom center;*/
 }
 
 img {
@@ -132,7 +134,7 @@ h5 {
 }
 
 .seleccion {
-  background-color: rgb(102, 27, 0);
+  background-color: rgb(232, 94, 43);
   color: #fff;
   border-radius: 10px;
   font-family: "Arima Madurai", cursive;
@@ -198,8 +200,9 @@ button {
   padding: 4px 10px;
   font-family: "Lobster", cursive;
   border: none;
-  background-color: rgb(160, 61, 25);
+  background-color: rgb(232, 94, 43);
   border-radius: 4px;
+  color: white;
 }
 
 #promociones {
@@ -223,7 +226,7 @@ button {
 }
 .contenedorPromo .nombrePromo {
   margin: 9px;
-  font-family: "Galindo", cursive;
+  font-family: "Arima Madurai", cursive;
   font-weight: bold;
   font-size: 22px;
 }
